@@ -26,7 +26,3 @@ def upload_image():
             return jsonify({"error": "Формат не соответствует"}), 415
     except Exception as e:
         return jsonify({"error": "Ошибка обработки"}), 400
-
-    image_path = f'gallery/{title}.{extension}'
-    with open(image_path, 'wb') as f:
-        f.write(image_data)
