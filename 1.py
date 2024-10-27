@@ -4,7 +4,7 @@ app = Flask(__name__, static_folder='static')
 
 @app.route('/')
 def index():
-    return send_from_directory(app.static_folder, 'static/index.html')
+    return send_from_directory(app.static_folder, 'index.html')
 
 @app.route('/jsonEndpoint')
 def json_endpoint():
